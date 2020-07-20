@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 
-
 export const CreateExercise = ({ location, match }) => {
   const [username, setUsername] = useState("");
   const [description, setDescription] = useState("");
