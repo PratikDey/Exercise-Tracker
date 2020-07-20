@@ -42,12 +42,12 @@ export const CreateExercise = ({ location, match }) => {
     const exercise = {
       username: username,
       description: description,
-      duration: duration,
-      date: date,
+      duration: duration
+     
     };
     console.log(exercise);
     editing
-      ? axios.post(`http://localhost:5000/exercise/update/${match.params.id}`)
+      ? axios.put(`http://localhost:5000/exercise/update/${match.params.id}`, exercise)
       : axios
           .post("http://localhost:5000/exercise/add", exercise)
           .then((res) => console.log(res.data));
@@ -95,12 +95,7 @@ export const CreateExercise = ({ location, match }) => {
             onChange={(e) => setDuration(e.target.value)}
           />
         </div>
-        <div className="form-group">
-          <label>Date: </label>
-          <div>
-            <DatePicker selected={date} onChange={() => setDate(date)} />
-          </div>
-        </div>
+        
 
         <div className="form-group">
           <input
