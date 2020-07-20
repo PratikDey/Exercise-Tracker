@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+
+
 
 export const CreateExercise = ({ location, match }) => {
   const [username, setUsername] = useState("");
